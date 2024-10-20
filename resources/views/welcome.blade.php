@@ -4,10 +4,19 @@
 
 @section('main-content')
 <h1>
-    Laravel Start 1
+    Movies
 </h1>
 
 <h2>
-    Ciao {{ $firstName }} {{ $lastName }}
+   Movies list:
 </h2>
+
+<ul>
+    @foreach ($movies as $movie)
+    <li>
+        {{movie->title}}
+    </li>  
+    @endforeach
+
+</ul>
 @endsection
